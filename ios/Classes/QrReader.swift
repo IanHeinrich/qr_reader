@@ -108,7 +108,7 @@ class QrReader: NSObject {
   var textureId: Int64!
   var pixelBuffer : CVPixelBuffer?
   let barcodeDetector: BarcodeScanner
-  let cameraPosition = AVCaptureDevice.Position.back
+  let cameraPosition = AVCaptureDevice.Position.front
   let qrCallback: (_:String) -> Void
   
   init(targetWidth: Int, targetHeight: Int, textureRegistry: FlutterTextureRegistry, options: BarcodeScannerOptions, qrCallback: @escaping (_:String) -> Void) throws {
